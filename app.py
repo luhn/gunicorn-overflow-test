@@ -23,6 +23,6 @@ def app(environ, start_response):
         ("Content-Length", str(len(data)))
     ])
     # Intentionally lower than nginx timeout, so few requests can complete
-    time.sleep(10)
+    time.sleep(3)
     logger.info('Gonna return the response from app')
     return iter([data])
